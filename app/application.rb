@@ -19,7 +19,7 @@ class Application
         resp.write "Your cart is empty"
       else
         @@cart.each do |item|
-        item == nil ? resp.write "Your cart is empty" : resp.write "#{item}\n"
+          resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
       cart_item = req.params["item"]
